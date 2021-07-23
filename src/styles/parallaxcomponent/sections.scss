@@ -7,30 +7,6 @@
     overflow: hidden;
     z-index: 1;
 
-    .section-one-text {
-        width: 50%;
-        margin: 400px auto;
-        z-index: 10;
-        position: relative;
-
-        .section-one-text-title {
-            margin-bottom: 500px;
-            text-align: center;
-            font-size: 3em;
-        }
-
-        .section-one-text-about {
-            margin-top: 100px;
-            margin-bottom: 100px;
-            p {
-                margin-top: 50px;
-                text-align: justify;
-            }
-        }
-
-      
-    }
-
     .section-one-animations {
         z-index: 5;
     }
@@ -52,7 +28,6 @@
     min-height: 5000px;
     background-color: inherit;
     position: relative;
-    overflow: hidden;
     z-index: 5;
 
     .section-three-text{
@@ -61,30 +36,92 @@
         margin: 0 auto;
         
 
-        .article-card {
+        .section-three-article-card {
             margin-bottom: 200px;
             margin-top: 100px;
-            border: 1px solid green;
 
-            .article-card-image {
-                img {
-                    width: 100%;
-                    height: auto;
-                }
+            .section-three-article-card-image {
+                height: 400px;
+                width: 100%;
+                background-color: #67D1FB;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 30px 0 0 0;
             }
 
-            .article-card-title {
+            .section-three-article-card-created {
+                margin-bottom: 20px;
+                 font-style: italic;
+            }
+
+            .section-three-article-card-title {
                 font-size: 2em;
                 margin-top: 10px;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
+            }
+
+            .section-three-article-card-content {
+                margin-top: 40px;
+                margin-bottom: 10px;
             }
         }
     }
-   
 
+    .more-button {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+
+        img {
+            cursor: pointer;
+            width: 35%;
+        }
+    }
+
+    .section-three-text-title {
+        width: 80%;
+        text-align: center; 
+        margin: 0 auto;
+        font-size: 2em;
+    }
 }
 
+.section-four {
+    width: 100%;
+    height: 700px;
+    background-color: inherit;
+    position: relative;
+    overflow: hidden;
+    z-index: 15;   
 
+    .section-four-text {
+        margin-top: 200px;
+        text-align: center;
+        z-index: 50;
+
+        h2 {
+            font-size: 1.5em;
+        }
+    }
+}
+
+.section-five {
+    width: 100%;
+    height: 1000px;
+    background-color: inherit;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+
+    .section-five-mountains {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+}
 
 
 @include breakpint(mobile) {
@@ -94,6 +131,20 @@
             .section-one-text-title {
                 font-size: 1em;
             }
+        }
+    }
+
+    .section-three {
+        .section-three-text{
+            width: 100%;
+
+            .section-three-article-card-title {
+                font-size: 1em;
+            }
+        }
+
+        .section-three-text-title {
+            font-size: 1em;
         }
     }
 }

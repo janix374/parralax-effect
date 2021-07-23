@@ -12,7 +12,6 @@ import { Alert } from '@material-ui/lab';
 import { makeStyles } from '@material-ui/core/styles';
 import { useAuth } from '../../contexts/AuthContext';
 import { useHistory } from 'react-router';
-import LoadingComponent from './../common/LoadingComponent';
 
 const useStyles = makeStyles({
 	clearSky: {
@@ -20,6 +19,9 @@ const useStyles = makeStyles({
 		height: '100vh',
 		width: '100%',
 		padding: '100px 0 0 0',
+	},
+	buttonClass: {
+		margin: '20px 0 0 0',
 	},
 });
 
@@ -71,8 +73,8 @@ const AdminLogin = () => {
 					<Grid item xs={8} md={6}>
 						{error && <Alert severity='error'>{error}</Alert>}
 						<form onSubmit={handleSubmit}>
-							<h2>Log in</h2>
-							<p>
+							<h2 className='my-3'>Log in</h2>
+							<p className='my-3'>
 								email: airship@yahoo <br />
 								password: 123456
 							</p>
@@ -83,6 +85,7 @@ const AdminLogin = () => {
 									type='email'
 									onChange={handleEmail}
 									value={email}
+									margin='normal'
 								/>
 								<TextField
 									label='Password'
@@ -90,9 +93,15 @@ const AdminLogin = () => {
 									type='password'
 									onChange={handlePassword}
 									value={password}
+									margin='normal'
 								/>
 							</FormGroup>
-							<Button type='submit' variant='contained' color='primary'>
+							<Button
+								type='submit'
+								variant='contained'
+								color='primary'
+								className={classes.buttonClass}
+							>
 								Log in
 							</Button>
 						</form>

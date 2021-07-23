@@ -28,16 +28,27 @@
         margin: 0 auto 100px auto;
         overflow: hidden;
         border-top: 1px solid black;
+        color: #964A00;
+
+        .article-view-card-picture {
+            height: 300px;
+            width: 70%;
+            background-color: #67D1FB;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 30px 0 0 0;
+        }
 
         .article-view-card-title {
-            margin: 0 auto;
-            padding: 2%;
+            font-size: 2em;
+            padding: 30px 0 0 0; 
         }
         .article-view-card-created{
-            padding: 30px; 
+            padding: 30px 0; 
+            font-style: italic;
         }
         .article-view-card-content {
-            padding: 30px;
+            padding: 30px 0;
         }
         .article-view-card-button {
             display: flex;

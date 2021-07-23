@@ -1,32 +1,46 @@
-import React, { useRef } from 'react';
-import Cumulus from '../clouds/Cumulus';
-import { CumulusThree, CumulusFive } from '../clouds/clouds';
+import React from 'react';
 import PropTypes from 'prop-types';
+import parse from 'html-react-parser';
+import morePics from '../../images/more.png';
 
-const SectionThree = () => {
+const SectionThree = ({ articles, handleLimit, limit }) => {
 	return (
 		<section className='section-three'>
-			<div className='section-three-text'>
-				<div className='section-one-text-title'>
-					<h2>Air-Ship Articles</h2>
-				</div>
-
-				<div className='article-card'>
-					<div className='article-card-image'>
-						<img
-							src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Fronalpstock_big.jpg/1200px-Fronalpstock_big.jpg'
-							alt='pics'
-						/>
-					</div>
-					<div className='article-card-title'>
-						<h3>About Us</h3>
-					</div>
-					<div className='article-card-content'>Content</div>
-				</div>
+			<div className='section-three-text-title'>
+				<h2>Air-Ship Articles</h2>
 			</div>
+			{articles.map((item) => {
+				const date1 = item.createDate.toDate().toDateString();
+				const date2 = item.createDate.toDate().toLocaleTimeString('en-US');
+				return (
+					<div key={item.id} className='section-three-text'>
+						<div className='section-three-article-card'>
+							<div className='section-three-article-card-image'></div>
+							<div className='section-three-article-card-title'>
+								<h3>{item.title}</h3>
+							</div>
+							<div className='section-three-article-card-created'>
+								{date1} {date2}
+							</div>
+							<div className='section-three-article-card-content'>
+								{parse(item.content)}
+							</div>
+						</div>
+					</div>
+				);
+			})}
+
+			{articles.length < limit ? (
+				''
+			) : (
+				<div className='more-button'>
+					<img src={morePics} alt='more' onClick={() => handleLimit()} />
+				</div>
+			)}
 		</section>
 	);
 };
+
 SectionThree.propTypes = {
 	offsetY: PropTypes.number,
 };

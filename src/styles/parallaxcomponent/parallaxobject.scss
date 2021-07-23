@@ -1,0 +1,101 @@
+// Airship
+.parallax-object-airship {
+    width: 100%;
+    position: fixed;
+    top: 100px;
+    left: 50px;
+    z-index: 10;
+
+    img {
+        width: 40%;
+        height: auto;
+        animation-name: swinging;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        cursor: pointer;
+    }
+
+    @keyframes swinging {
+        0%  {transform: rotate(0deg);}
+        20% {transform: rotate(2deg);}
+        80% {transform: rotate(-2deg);}
+        100% {transform: rotate(0deg);}
+      }
+}
+
+.parallax-object-airship-button {
+    width: 100px;
+    position: fixed;
+    top: 400px;
+    z-index: 50;
+    cursor: pointer;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+//Birds
+.parallax-object-birds {
+    z-index: 5;
+    position: absolute;
+    // top: 9000px;
+    left: -200px;
+    width: 100%;
+
+    img {
+        transform: rotateX(20deg);
+        width: 15%;
+        height: auto;
+        animation-name: flying;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes flying {
+        0%  {transform: rotateX(0deg);}
+        50% {transform: rotateX(15deg);}
+        100% {transform: rotateX(0deg);}
+      }
+}
+
+// Balloon
+.parallax-object-balloon {
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+
+    img {
+        width: 15%;
+        height: auto;
+        animation-name: swinging1;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes swinging1 {
+        0%  {transform: rotate(0deg);}
+        20% {transform: rotate(5deg);}
+        80% {transform: rotate(-5deg);}
+        100% {transform: rotate(0deg);}
+      }
+}
+
+.parallax-object-zeppelin {
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    right: 0px;
+
+    img {
+        width: 20%;
+        height: auto;
+        float: right;
+    }
+
+}

@@ -1,7 +1,10 @@
 .container {
-    min-height: 20000px;
+    min-height: 5000px;
     position: relative;
     background: linear-gradient(to bottom, #67d1fb 0%, #9be2fe 100%);
+    overflow: hidden;
+    color: #6b3f12;
+    // color: #354A54;
     // color: #964A00;
-    color: #354A54;
+
 }

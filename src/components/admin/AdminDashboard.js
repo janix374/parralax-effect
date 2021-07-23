@@ -3,6 +3,8 @@ import ArticleView from './ArticleView';
 import { Link } from 'react-router-dom';
 import LoadingComponent from '../common/LoadingComponent';
 import articlePics from '../../images/article.png';
+import blogPics from '../../images/blog.png';
+import logoutPics from '../../images/logout.png';
 import { Button } from '@material-ui/core';
 import firebase from '../../config/firebase';
 import { useAuth } from '../../contexts/AuthContext';
@@ -18,6 +20,7 @@ const AdminDashboard = () => {
 
 	const getMyArticles = () => {
 		db.collection('Articles')
+			.orderBy('createDate')
 			.limit(10)
 			.get()
 			.then((docs) => {
@@ -63,13 +66,11 @@ const AdminDashboard = () => {
 		getMyArticles();
 	}, []);
 
-	console.log(currentUser);
-
 	return (
 		<div className='dasboard-sky'>
 			<div className='profile-link'>
 				<Button color='primary' onClick={handleLogOut}>
-					LogOut
+					<img src={logoutPics} alt='LogOut' title='LogOut' />
 				</Button>
 			</div>
 			<div className='article-link'>
@@ -78,11 +79,16 @@ const AdminDashboard = () => {
 						<img src={articlePics} alt='New Article' title='New Article' />
 					</Link>
 				</Button>
+				<Button>
+					<Link to={`/`} target='_blank'>
+						<img src={blogPics} alt='Blog' title='Blog' />
+					</Link>
+				</Button>
 			</div>
 
 			<div className='dashboard-container'>
 				{articles.length ? (
-					articles.map((item) => {
+					articles.reverse().map((item) => {
 						return (
 							<div key={item.id}>
 								<ArticleView article={item} handleDelete={handleDelete} />

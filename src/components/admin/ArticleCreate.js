@@ -115,7 +115,6 @@ const ArticleCreate = () => {
 		}
 	};
 
-	console.log(match);
 	return (
 		<div className='article-create-sky'>
 			<div className='article-create-form-container text-center'>

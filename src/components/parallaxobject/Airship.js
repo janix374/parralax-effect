@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import airship from '../../images/airship.png';
 import PropTypes from 'prop-types';
-import style from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark';
 
-const Airship = ({ offsetY }) => {
+const Airship = () => {
 	const [hideAirShip, setHideAirShip] = useState(false);
 	let styles = { transform: `translateX(0px)` };
 
@@ -23,18 +22,21 @@ const Airship = ({ offsetY }) => {
 		setHideAirShip(!hideAirShip);
 	};
 
-	console.log(offsetY);
 	return (
 		<>
 			{hideAirShip ? (
-				<button className='airship-button' type='button' onClick={handleHiding}>
+				<button
+					className='parallax-object-airship-button'
+					type='button'
+					onClick={handleHiding}
+				>
 					<img src={airship} alt='airship' />
 				</button>
 			) : (
 				''
 			)}
 
-			<div className='airship' style={styles}>
+			<div className='parallax-object-airship' style={styles}>
 				{hideAirShip ? (
 					''
 				) : (

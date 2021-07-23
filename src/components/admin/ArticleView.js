@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 import editPics from '../../images/edit.png';
 import delPics from '../../images/delete.png';
+import PropTypes from 'prop-types';
 
 const ArticleView = ({ article, handleDelete }) => {
 	const date1 = article.createDate.toDate().toDateString();
@@ -12,6 +13,17 @@ const ArticleView = ({ article, handleDelete }) => {
 	return (
 		<>
 			<div className='article-view-card'>
+				{article.featureImage.length == 0 ? (
+					''
+				) : (
+					<div
+						className='article-view-card-picture'
+						style={{
+							backgroundImage: `url(${article.featureImage})`,
+						}}
+					></div>
+				)}
+
 				<div className='article-view-card-title'>
 					<h2>{article.title}</h2>
 				</div>
@@ -38,6 +50,11 @@ const ArticleView = ({ article, handleDelete }) => {
 			</div>
 		</>
 	);
+};
+
+ArticleView.propTypes = {
+	article: PropTypes.object,
+	handleDelete: PropTypes.func,
 };
 
 export default ArticleView;

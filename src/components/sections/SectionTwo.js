@@ -6,14 +6,9 @@ import {
 	CumulusThree,
 	CumulusFour,
 } from '../clouds/clouds';
-import PropTypes from 'prop-types';
 
-function SectionTwo({ offsetY }) {
+function SectionTwo() {
 	const sectionTwoRef = useRef();
-	const rightMove = offsetY;
-	// if (sectionTwoRef.current) {
-	// 	console.log(sectionTwoRef.current.offsetTop);
-	// }
 
 	return (
 		<section className='section-two' ref={sectionTwoRef}>
@@ -71,8 +66,5 @@ function SectionTwo({ offsetY }) {
 		</section>
 	);
 }
-SectionTwo.propTypes = {
-	offsetY: PropTypes.number,
-};
 
 export default SectionTwo;
