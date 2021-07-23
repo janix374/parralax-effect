@@ -14,7 +14,7 @@ const db = firebase.firestore();
 
 const AdminDashboard = () => {
 	const [articles, setArticles] = useState([]);
-	const [error, setError] = useState('');
+	const [error, setError] = useState(false);
 	const { currentUser, logout } = useAuth();
 	const history = useHistory();
 
@@ -35,7 +35,8 @@ const AdminDashboard = () => {
 					});
 					setArticles(allArticles);
 				}
-			});
+			})
+			.catch((err) => setError(true));
 	};
 
 	const handleDelete = (id) => {
@@ -44,7 +45,7 @@ const AdminDashboard = () => {
 			.delete()
 			.then(() => {
 				const newArticles = articles.filter((item) => item.id !== id);
-				setArticles(newArticles);
+				setArticles(newArticles.reverse());
 				console.log('Document successfully deleted!');
 			})
 			.catch((error) => {
@@ -85,20 +86,23 @@ const AdminDashboard = () => {
 					</Link>
 				</Button>
 			</div>
-
-			<div className='dashboard-container'>
-				{articles.length ? (
-					articles.reverse().map((item) => {
-						return (
-							<div key={item.id}>
-								<ArticleView article={item} handleDelete={handleDelete} />
-							</div>
-						);
-					})
-				) : (
-					<LoadingComponent />
-				)}
-			</div>
+			{error ? (
+				<div className='dashboard-container-error'>Something went wrong</div>
+			) : (
+				<div className='dashboard-container'>
+					{articles.length > 0 ? (
+						articles.reverse().map((item) => {
+							return (
+								<div key={item.id}>
+									<ArticleView article={item} handleDelete={handleDelete} />
+								</div>
+							);
+						})
+					) : (
+						<LoadingComponent />
+					)}
+				</div>
+			)}
 		</div>
 	);
 };

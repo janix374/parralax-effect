@@ -27,7 +27,7 @@ const useStyles = makeStyles({
 
 const AdminLogin = () => {
 	const classes = useStyles();
-	const { login } = useAuth();
+	const { login, currentUser } = useAuth();
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [error, setError] = useState('');

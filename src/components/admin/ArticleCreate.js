@@ -62,7 +62,7 @@ const ArticleCreate = () => {
 					setTitle(doc.data().title);
 					setContent(doc.data().content);
 					setFeatureImage(doc.data().featureImage);
-					setCrateDate(createDate);
+					setCrateDate(new Date(doc.data().createDate.seconds * 1000));
 				} else {
 					history.push('/dashboard');
 				}

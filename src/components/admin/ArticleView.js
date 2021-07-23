@@ -7,8 +7,16 @@ import delPics from '../../images/delete.png';
 import PropTypes from 'prop-types';
 
 const ArticleView = ({ article, handleDelete }) => {
-	const date1 = article.createDate.toDate().toDateString();
-	const date2 = article.createDate.toDate().toLocaleTimeString('en-US');
+	const timestamp = (ts) => {
+		const date = new Date(ts * 1000);
+		return (
+			date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate()
+		);
+	};
+	const timestampminut = (ts) => {
+		const date = new Date(ts * 1000);
+		return date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+	};
 
 	return (
 		<>
@@ -28,7 +36,9 @@ const ArticleView = ({ article, handleDelete }) => {
 					<h2>{article.title}</h2>
 				</div>
 				<div className='article-view-card-created'>
-					{date1} {date2}
+					{timestamp(article.createDate.seconds)}
+					<br />
+					{timestampminut(article.createDate.seconds)}
 				</div>
 				<div className='article-view-card-content'>
 					{parse(article.content)}

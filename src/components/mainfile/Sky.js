@@ -9,7 +9,7 @@ import Balloon from '../parallaxobject/Balloon';
 import Zeppelin from '../parallaxobject/Zeppelin';
 import SectionFour from '../sections/SectionFour';
 
-const Sky = ({ articles, handleLimit, limit }) => {
+const Sky = ({ articles, handleLimit, limit, error }) => {
 	return (
 		<div className='container'>
 			<LoginButton />
@@ -23,6 +23,7 @@ const Sky = ({ articles, handleLimit, limit }) => {
 				articles={articles}
 				handleLimit={handleLimit}
 				limit={limit}
+				error={error}
 			/>
 			<SectionFour />
 		</div>

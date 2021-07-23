@@ -20,6 +20,12 @@
 
     }
 
+    .dashboard-container-error {
+        margin-top: 100px;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
 }
 
    //Articles card    
@@ -62,7 +68,7 @@
     background: linear-gradient(to bottom, #67d1fb 0%, #9be2fe 100%);
     min-height: 100vh;
 
-    .article-create-form-container{
+    .article-create-form-container {
         width: 80%;
         margin:  0 auto;
         padding: 100px 0px 100px 0px;
@@ -72,7 +78,6 @@
         }
 
         form {
-            // background-color: white;
 
             .article-create-form-group {
                 margin-top: 50px;

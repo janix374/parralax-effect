@@ -1,12 +1,12 @@
 // tetx for section one
 .section-one-text {
-    width: 50%;
-    margin: 400px auto;
+    width: 70%;
+    margin: 300px auto;
     z-index: 10;
     position: relative;
 
     .section-one-text-title {
-        margin-bottom: 500px;
+        margin-bottom: 200px;
         text-align: center;
         font-size: 3em;
     }
@@ -23,11 +23,12 @@
   
 }
 
-@include breakpint(mobile) {
+@include breakpint(tablet) {
     .section-one-text {
+        width: 90%;
     
         .section-one-text-about {
-            font-size: 1em;
+            font-size: 0.9em;
         }
       
     }

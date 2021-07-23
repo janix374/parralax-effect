@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import Sky from './mainfile/Sky';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import AdminDashboard from './admin/AdminDashboard';
 import ArticleCreate from './admin/ArticleCreate';
 import AdminLogin from '../components/admin/AdminLogin';
 import AuthProvider from '../contexts/AuthContext';
-import PrivateRoute from './admin/PrivateRoute';
+import PrivateRoute from './routes/PrivateRoute';
+import PublicRoute from './routes/PublicRoute';
 import firebase from '../config/firebase';
 
 const db = firebase.firestore();
 
 const AppContainer = () => {
 	const [articles, setArticles] = useState([]);
+	const [error, setError] = useState(false);
 	const [limit, setLimit] = useState(5);
 
 	const getMyArticles = (limit) => {
@@ -31,7 +33,8 @@ const AppContainer = () => {
 					});
 					setArticles(allArticles);
 				}
-			});
+			})
+			.catch((err) => setError(true));
 	};
 
 	const handleLimit = () => {
@@ -44,7 +47,7 @@ const AppContainer = () => {
 
 	return (
 		<div>
-			<Router>
+			<Router basename='airship'>
 				<AuthProvider>
 					<Switch>
 						<Route path='/' exact>
@@ -52,6 +55,7 @@ const AppContainer = () => {
 								articles={articles}
 								handleLimit={handleLimit}
 								limit={limit}
+								error={error}
 							/>
 						</Route>
 						<PrivateRoute path='/dashboard' exact component={AdminDashboard} />
@@ -65,9 +69,10 @@ const AppContainer = () => {
 							exact
 							component={ArticleCreate}
 						/>
-						<Route path='/login' exact>
+						{/* <Route path='/login' exact>
 							<AdminLogin />
-						</Route>
+						</Route> */}
+						<PublicRoute path='/login' exact component={AdminLogin} />
 					</Switch>
 				</AuthProvider>
 			</Router>
