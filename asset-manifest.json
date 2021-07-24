@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/parallax-effect/static/css/main.b83f9a6a.chunk.css",
-    "main.js": "/parallax-effect/static/js/main.1e28039b.chunk.js",
-    "main.js.map": "/parallax-effect/static/js/main.1e28039b.chunk.js.map",
+    "main.css": "/parallax-effect/static/css/main.45328301.chunk.css",
+    "main.js": "/parallax-effect/static/js/main.7c1252d9.chunk.js",
+    "main.js.map": "/parallax-effect/static/js/main.7c1252d9.chunk.js.map",
     "runtime-main.js": "/parallax-effect/static/js/runtime-main.c6a2de97.js",
     "runtime-main.js.map": "/parallax-effect/static/js/runtime-main.c6a2de97.js.map",
     "static/css/2.f83b9687.chunk.css": "/parallax-effect/static/css/2.f83b9687.chunk.css",
-    "static/js/2.dd143c85.chunk.js": "/parallax-effect/static/js/2.dd143c85.chunk.js",
-    "static/js/2.dd143c85.chunk.js.map": "/parallax-effect/static/js/2.dd143c85.chunk.js.map",
+    "static/js/2.c1635839.chunk.js": "/parallax-effect/static/js/2.c1635839.chunk.js",
+    "static/js/2.c1635839.chunk.js.map": "/parallax-effect/static/js/2.c1635839.chunk.js.map",
     "index.html": "/parallax-effect/index.html",
     "static/css/2.f83b9687.chunk.css.map": "/parallax-effect/static/css/2.f83b9687.chunk.css.map",
-    "static/css/main.b83f9a6a.chunk.css.map": "/parallax-effect/static/css/main.b83f9a6a.chunk.css.map",
-    "static/js/2.dd143c85.chunk.js.LICENSE.txt": "/parallax-effect/static/js/2.dd143c85.chunk.js.LICENSE.txt",
-    "static/media/airship.e191fc23.png": "/parallax-effect/static/media/airship.e191fc23.png",
+    "static/css/main.45328301.chunk.css.map": "/parallax-effect/static/css/main.45328301.chunk.css.map",
+    "static/js/2.c1635839.chunk.js.LICENSE.txt": "/parallax-effect/static/js/2.c1635839.chunk.js.LICENSE.txt",
+    "static/media/airship.c2d27249.png": "/parallax-effect/static/media/airship.c2d27249.png",
     "static/media/article.cb7fb17e.png": "/parallax-effect/static/media/article.cb7fb17e.png",
     "static/media/balloon.c2d27249.png": "/parallax-effect/static/media/balloon.c2d27249.png",
     "static/media/birds.12ac1bab.png": "/parallax-effect/static/media/birds.12ac1bab.png",
@@ -28,13 +28,14 @@
     "static/media/pics3.6e30b721.jpg": "/parallax-effect/static/media/pics3.6e30b721.jpg",
     "static/media/pics4.34f8cf27.jpg": "/parallax-effect/static/media/pics4.34f8cf27.jpg",
     "static/media/submit.28c7e5ac.png": "/parallax-effect/static/media/submit.28c7e5ac.png",
-    "static/media/zeppelin.83c575df.png": "/parallax-effect/static/media/zeppelin.83c575df.png"
+    "static/media/zeppelin.83c575df.png": "/parallax-effect/static/media/zeppelin.83c575df.png",
+    "static/media/zeppelin2.4711a20c.png": "/parallax-effect/static/media/zeppelin2.4711a20c.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c6a2de97.js",
     "static/css/2.f83b9687.chunk.css",
-    "static/js/2.dd143c85.chunk.js",
-    "static/css/main.b83f9a6a.chunk.css",
-    "static/js/main.1e28039b.chunk.js"
+    "static/js/2.c1635839.chunk.js",
+    "static/css/main.45328301.chunk.css",
+    "static/js/main.7c1252d9.chunk.js"
   ]
 }
