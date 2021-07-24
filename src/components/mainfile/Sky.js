@@ -9,6 +9,7 @@ import Balloon from '../parallaxobject/Balloon';
 import Zeppelin from '../parallaxobject/Zeppelin';
 import SectionFour from '../sections/SectionFour';
 import ZeppelinTwo from '../parallaxobject/ZeppelinTwo';
+import PropTypes from 'prop-types';
 
 const Sky = ({ articles, handleLimit, limit, error }) => {
 	return (
@@ -30,6 +31,13 @@ const Sky = ({ articles, handleLimit, limit, error }) => {
 			<SectionFour />
 		</div>
 	);
+};
+
+Sky.propTypes = {
+	articles: PropTypes.array,
+	handleLimit: PropTypes.func,
+	limit: PropTypes.number,
+	error: PropTypes.bool,
 };
 
 export default Sky;

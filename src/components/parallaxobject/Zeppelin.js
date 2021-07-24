@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import zeppelin from '../../images/zeppelin.png';
+import PropTypes from 'prop-types';
 
 const Zeppelin = ({ topOffSet }) => {
 	const zzeppelinRef = useRef();
@@ -29,6 +30,10 @@ const Zeppelin = ({ topOffSet }) => {
 			<img src={zeppelin} alt='birds' />
 		</div>
 	);
+};
+
+Zeppelin.propTypes = {
+	topOffSet: PropTypes.number,
 };
 
 export default Zeppelin;

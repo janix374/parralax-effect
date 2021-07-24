@@ -67,7 +67,10 @@ const SectionThree = ({ articles, handleLimit, limit, error }) => {
 };
 
 SectionThree.propTypes = {
-	offsetY: PropTypes.number,
+	articles: PropTypes.array,
+	handleLimit: PropTypes.func,
+	limit: PropTypes.number,
+	error: PropTypes.bool,
 };
 
 export default SectionThree;

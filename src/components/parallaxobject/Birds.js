@@ -32,4 +32,8 @@ const Birds = ({ topOffSet }) => {
 	);
 };
 
+Birds.propTypes = {
+	topOffSet: PropTypes.number,
+};
+
 export default Birds;

@@ -38,4 +38,8 @@ const ZeppelinTwo = ({ topOffSet }) => {
 	);
 };
 
+ZeppelinTwo.propTypes = {
+	topOffSet: PropTypes.number,
+};
+
 export default ZeppelinTwo;

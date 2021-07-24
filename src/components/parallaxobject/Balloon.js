@@ -31,4 +31,8 @@ const Balloon = ({ topOffSet }) => {
 	);
 };
 
+Balloon.propTypes = {
+	topOffSet: PropTypes.number,
+};
+
 export default Balloon;

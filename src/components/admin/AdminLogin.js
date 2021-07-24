@@ -1,12 +1,10 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
 	Button,
 	Grid,
 	TextField,
 	FormGroup,
 	Container,
-	Input,
-	InputLabel,
 } from '@material-ui/core';
 import { Alert } from '@material-ui/lab';
 import { makeStyles } from '@material-ui/core/styles';
