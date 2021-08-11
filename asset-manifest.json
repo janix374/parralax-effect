@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/parallax-effect/static/css/main.1bc6de63.chunk.css",
-    "main.js": "/parallax-effect/static/js/main.51293978.chunk.js",
-    "main.js.map": "/parallax-effect/static/js/main.51293978.chunk.js.map",
+    "main.js": "/parallax-effect/static/js/main.e3f9267e.chunk.js",
+    "main.js.map": "/parallax-effect/static/js/main.e3f9267e.chunk.js.map",
     "runtime-main.js": "/parallax-effect/static/js/runtime-main.c6a2de97.js",
     "runtime-main.js.map": "/parallax-effect/static/js/runtime-main.c6a2de97.js.map",
     "static/css/2.f83b9687.chunk.css": "/parallax-effect/static/css/2.f83b9687.chunk.css",
@@ -36,6 +36,6 @@
     "static/css/2.f83b9687.chunk.css",
     "static/js/2.c1635839.chunk.js",
     "static/css/main.1bc6de63.chunk.css",
-    "static/js/main.51293978.chunk.js"
+    "static/js/main.e3f9267e.chunk.js"
   ]
 }
